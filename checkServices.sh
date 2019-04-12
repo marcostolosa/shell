@@ -18,7 +18,7 @@ then
     curl -X POST -H 'Content-Type: application/json' --data '{"icon_emoji":":radioactive:","text":"More than one instances of **Example** running!","attachments":[{"title":"Name - Example Service","title_link":"https://github.com/<ID>/<Service_Name>/","text":"Service Description","color":"#CE2121"}]}' 'https://example.com/webhooks/<ID>'
 
     kill -9 "$PIDS"
-    systemctl restart <service_name>
+    systemctl restart "$SERVICE"
 else
     date >> /root/logs/check.log
     echo "All good, just 01 instance is running." >> /root/logs/check.sh
