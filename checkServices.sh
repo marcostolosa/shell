@@ -21,5 +21,5 @@ then
     systemctl restart "$SERVICE"
 else
     date >> /root/logs/check.log
-    echo "All good, just 01 instance is running." >> /root/logs/check.sh
+    echo "All good, just 01 instance is running." >> /root/logs/check.log
 fi
